@@ -1,0 +1,20 @@
+{
+  "name": "ecommerce-mern-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rorosana/ecommerce-mern-backend.git"
+  },
+  "keywords": [],
+  "author": "Rosana Patiño Caraballo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rorosana/ecommerce-mern-backend/issues"
+  },
+  "homepage": "https://github.com/rorosana/ecommerce-mern-backend#readme"
+}
