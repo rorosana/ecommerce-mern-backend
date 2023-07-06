@@ -40,6 +40,14 @@ const UserSchema = Schema({
     orders: [{type: Schema.Types.ObjectId, ref: 'Order'}]
 }, {minimize: false});
 
+UserSchema.statics.findByCredentials = async function(email, password) {
+    const user = await User.findOne({email});
+    if(!user) throw new Error('invalid credentials');
+    const isSamePassword = bcrypt.compareSync(password, user.password);
+    if(isSamePassword) return user;
+    throw new Error('Invalid credentials');
+}
+
 const User = mongoose.model('User', UserSchema);
 
 module.exports = User;
